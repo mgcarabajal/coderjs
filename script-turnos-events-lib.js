@@ -1,10 +1,6 @@
 let opcion = 0;
 let seguirAgregandoTurnos;
 let turnoAgendado;
-// Fixear
-// modo dark
-// traer sectores dinamicamente
-
 // LOCAL STORAGE Array de turnos
 function obtener_localstorage(clave) {
     return JSON.parse(localStorage.getItem(clave));
@@ -199,13 +195,9 @@ function mostrarTurnosFinalesModal(arrayDeTurnos) {
 
 // funcion para que se cierre el modal,
 document.getElementById("genial").addEventListener('click', () => {
-
     // document.getElementById("exampleModal").style.display = "none";
     location.reload();
-   
-
-})
-
+   })
 
 function borrarElemento(id) {
     let tablaTurnos = document.getElementById("tabla-turnos-asignados");
