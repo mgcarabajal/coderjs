@@ -1,0 +1,242 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+
+}
+
+.opciones button {
+    margin: 5px;
+    cursor: pointer;
+}
+
+#enviar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.dark .modal {
+    background-color: black;
+    color: white;
+
+}
+
+.dark .modal-footer {
+    background-color: black;
+    color: white;
+}
+
+.dark button {
+    color: black;
+}
+
+.dark .modal-footer a {
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .opciones {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
+
+.modal-footer {
+    text-align: center !important;
+}
+
+.modal-footer a {
+    border: 1px solid green;
+}
+
+.modal-content .injected {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.borrar {
+    width: 300px;
+}
+
+.modal {
+    top: 122px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+#current-date {
+    font-size: 24px;
+    color: green;
+}
+
+#mostrarTurnos {
+    padding: 20px;
+    margin-top: 20px
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: green;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.darkm {
+    display: flex;
+    justify-content: end;
+    font-weight: 700;
+}
+
+.darkm span {
+
+    margin-right: 10px;
+}
+
+nav span {
+    font-family: 'Truculenta', sans-serif;
+    font-size: 30px;
+}
+
+.fa-solid,
+.fas {
+    font-size: 36px;
+}
+
+#exampleModal {
+    display: none;
+}
+
+.header {
+    display: flex !important;
+    justify-content: space-around !important;
+}
+
+#tabla-turnos-disponibles {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    cursor: pointer;
+}
+
+#tabla-turnos-disponibles td,
+#tabla-turnos-disponibles th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tabla-turnos-disponibles tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabla-turnos-disponibles tr:hover {
+    background-color: #ddd;
+}
+
+#tabla-turnos-disponibles th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+#finalizar {
+    display: none;
+    margin-top: 30px;
+    float: right;
+}
+.fa-trash-can{ 
+    cursor: pointer;
+}

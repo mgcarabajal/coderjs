@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCampaña vacunación 2022</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar work">
+                <div class="container work">
+                    <i class="fa-solid fa-syringe"></i>
+                    <span class="work">Campaña vacunación 2022</span>
+                    <span id="current-date"></span>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="darkm">
+                <span>Tema oscuro</span>
+                <label class="switch">
+                    <input id="switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-fluid"
+                    src="https://www.gannett-cdn.com/media/2021/08/21/SleepyEye/gda-covid-19-vaccine-2021-08-11-img.jpg?width=980&height=717&fit=crop&format=pjpg&auto=webp"
+                    alt="vaccination">
+            </div>
+            <div class="col-md-8">
+                <h3>Ya podés solicitar un turno para la vacunación contra el COVID-19.</h3>
+                <hr>
+                Elegí una sede de vacunación:
+                <select name="sedes" id="sedes" onchange="changeFunc();">
+                    <option value="" disabled selected>Seleccione una sede</option>
+                    <option value="Sede 1">Todas las sedes</option>
+                    <option value="Sede 1">Sede 1</option>
+                    <option value="Sede 2">Sede 2</option>
+                    <option value="Sede 3">Sede 3</option>
+                    <option value="Sede 4">Sede 4</option>
+                </select>   
+
+                <div class="mt-5" id="resultados">
+
+                </div>
+
+                <button id="finalizar">Ver turnos</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade work" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog work">
+            <div class="modal-content work">
+                <div class="modal-header work">
+                    <h3 class="modal-title h3-title" id="exampleModalLabel">Estos son los turnos que usted solicitò</h3>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body work">
+                    <div class="modal-footer" id="modal-content">
+
+                    </div>
+                </div>
+                <div class="modal-footer work">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                    <button type="button" id="genial" class="btn btn-primary" >
+
+                        Genial!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.2/build/global/luxon.min.js"></script>
+    <script src="/script-turnos-events-lib.js"></script>
+    <script src="/toasts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/af6db013e4.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

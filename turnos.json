@@ -1,0 +1,11 @@
+[
+    {"id":"15asd235","dia":"lunes","horario":"13hs","disponible":true,"sede":1},
+    {"id":"35asd746","dia":"martes","horario":"12hs","disponible":true,"sede":1},
+    {"id":"81qwe129","dia":"miercoles","horario":"18hs","disponible":true,"sede":2},
+    {"id":"2472dfn4","dia":"jueves","horario":"16hs","disponible":true,"sede":2},
+    {"id":"2347872s","dia":"viernes","horario":"23hs","disponible":true,"sede":3},
+    {"id":"234asdas","dia":"lunes","horario":"23hs","disponible":true,"sede":3},
+    {"id":"22134787","dia":"martes","horario":"23hs","disponible":true,"sede":4},
+    {"id":"23222745","dia":"miercoles","horario":"23hs","disponible":true,"sede":4}
+
+]
