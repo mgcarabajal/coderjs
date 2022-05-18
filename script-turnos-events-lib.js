@@ -217,29 +217,54 @@ let diaUsuario = document.getElementById("sedes");
 diaUsuario.addEventListener('click', function (event) {
     let diaElegido = event.target.id;
 });
-// MODO OSCURO LS
-let switchButton = document.getElementById('switch');
-let workContainer = document.querySelectorAll('.work');
 
-switchButton.addEventListener('change', () => {
-    document.body.classList.toggle('dark'); //cambiar el cuerpo del HTML por la clase 'dark'
-    switchButton.classList.toggle('active');//cambiar el botón HTML con el id='switch' con la clase 'active'
-    workContainer.forEach(element => element.classList.toggle('dark'));
+let dropdown = document.getElementById('sedes');
+dropdown.length = 0;
 
-    if (document.body.classList.contains('dark')) { //cuando el cuerpo tiene la clase 'dark' actualmente
-        localStorage.setItem('darkMode', 'enabled'); //almacenar estos datos si el modo oscuro está activado
-    } else {
-        localStorage.setItem('darkMode', 'disabled'); //almacenar estos datos si el modo oscuro está desactivado
-    }
-    var x = document.getElementById("switch");
+let defaultOption = document.createElement('option');
+defaultOption.text = 'Elige una sede:';
 
-});
-var x = document.getElementById("switch");
-if (localStorage.getItem('darkMode') == 'enabled') {
-    // x.innerHTML = "Modo Claro";
-    document.body.classList.toggle('dark');
-    switchButton.classList.toggle('active');
-    workContainer.classList.toggle('dark');
-} else {
-    //     
-}
+
+dropdown.add(defaultOption);
+dropdown.selectedIndex = 0;
+let allSedesOption = document.createElement('option');
+allSedesOption.text = 'Todas las sedes';
+
+dropdown.add(allSedesOption);
+dropdown.selectedIndex = 1;
+
+const url = '/turnos.json';
+
+fetch(url)  
+  .then(  
+    function(response) {  
+      if (response.status !== 200) {  
+        console.warn('Error 200! ' + 
+          response.status);  
+        return;  
+      }
+
+      // response..
+      response.json().then(function(data) {  
+        let option;
+        console.log(data);
+        const sedes = data.map((element)=>element.sede);
+        console.log(sedes);
+        // array sin duplicados
+        const bren = [...new Set(sedes)];
+       
+        
+    	for (let i = 0; i < bren.length; i++) {
+            console.log(bren[i]);
+          option = document.createElement('option');
+      	  option.text = "Sede " + bren[i];
+            console.log(bren[i]);
+      	  dropdown.add(option);
+    	}    
+      });  
+    }  
+  )  
+  .catch(function(err) {  
+    console.error('Fetch Error -', err);  
+  });
+
