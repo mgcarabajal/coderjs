@@ -195,7 +195,7 @@ function mostrarTurnosFinalesModal(arrayDeTurnos) {
 
 // funcion para que se cierre el modal,
 document.getElementById("genial").addEventListener('click', () => {
-    // document.getElementById("exampleModal").style.display = "none";
+
     location.reload();
    })
 
@@ -226,12 +226,12 @@ defaultOption.text = 'Elige una sede:';
 
 
 dropdown.add(defaultOption);
-dropdown.selectedIndex = 0;
+
 let allSedesOption = document.createElement('option');
 allSedesOption.text = 'Todas las sedes';
 
 dropdown.add(allSedesOption);
-dropdown.selectedIndex = 1;
+dropdown.selectedIndex = 0;
 
 const url = '/turnos.json';
 
