@@ -32,10 +32,10 @@ function crearTabla(turnosDeSede) {
 // DESHABILITANDO EL BOTON EN EL DOM SI EL TURNO ESTA FALSE
 function comprobarBtns(turnosDeSede) {
     let turnosArray = obtener_localstorage("turnosAsignadosUsuario");
-    let turnosfalse = turnosArray.filter(turno => turno.disponible == false);
+    let turnosfalse = turnosArray?.filter(turno => turno.disponible == false);
     console.log(turnosfalse);
 
-    let diasfalsos = turnosfalse.map(elemento => elemento.id);
+    let diasfalsos = turnosfalse?.map(elemento => elemento.id);
     console.log(diasfalsos);
     
     let opciones = document.querySelectorAll(".agendar");
@@ -43,7 +43,7 @@ function comprobarBtns(turnosDeSede) {
     console.log(opciones);
 
     opciones.forEach(element => {
-        if (diasfalsos.includes(element.id)) {
+        if (diasfalsos?.includes(element.id)) {
             element.setAttribute("disabled", '');
         }
     })
